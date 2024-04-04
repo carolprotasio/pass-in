@@ -1,3 +1,7 @@
+# NTW Unite - Rocketseat
+ Este projeto foi desenvolvido durante o evento NLW Unite da Rocketseat, onde o desafio era criar o projeto Pass.in. 
+Utilizei a linguagem Java para desenvolver esta aplicação, segue alguns detalhes sobre o Projeto:
+
 <h1>Especificações</h1>
 
 # pass.in
@@ -26,7 +30,7 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 - [ ] Banco de dados
 - [ ] Nessa aplicação vamos utilizar banco de dados relacional (SQL). Para ambiente de desenvolvimento seguiremos com o SQLite pela facilidade do ambiente.
 - [ ] Diagrama ERD
-![Diaagrama ERD](https://file.notion.so/f/f/08f749ff-d06d-49a8-a488-9846e081b224/8f354dec-0218-43af-a16c-16a86f2d82b0/erd.svg?id=1d4a760d-238b-477a-ac6d-c03e0bd682af&table=block&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&expirationTimestamp=1712340000000&signature=uhCjBVqgYe3pr0gfu4OONy0kRx_cF8-LOX8BmoJw6tM&downloadName=erd.svg)
+<img src="https://file.notion.so/f/f/08f749ff-d06d-49a8-a488-9846e081b224/8f354dec-0218-43af-a16c-16a86f2d82b0/erd.svg?id=1d4a760d-238b-477a-ac6d-c03e0bd682af&table=block&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&expirationTimestamp=1712340000000&signature=uhCjBVqgYe3pr0gfu4OONy0kRx_cF8-LOX8BmoJw6tM&downloadName=erd.svg" alt="Diagrama ERD" style="width:800px;height:800px;">
 
 # Estrutura do banco (SQL)
 
@@ -58,3 +62,73 @@ CREATE TABLE "check_ins" (
 CREATE UNIQUE INDEX "events_slug_key" ON "events"("slug");
 CREATE UNIQUE INDEX "attendees_event_id_email_key" ON "attendees"("event_id", "email");
 CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
+```
+# Criando o Projeto
+
+-  Projeto foi criado usando Spring Initializr, utilizando as seguintes dependências:
+    - Spring Web
+    - Flyway
+    - Dev Tools
+    - Lombok
+    - JPA
+- Tecnológias Utilizadas
+    - IntelliJ IDEA
+    - Maven
+    - Java 17
+    - Insomnia
+    - Notion
+
+
+       
+- [ ] Configurar banco de dados na aplicação
+    
+    ```xml
+    		<dependency>
+    			<groupId>org.hsqldb</groupId>
+    			<artifactId>hsqldb</artifactId>
+    			<version>2.7.1</version>
+    		</dependency>
+    ```
+    
+- [ ] Criar migrations para criação das tabelas
+- [ ] Criar entidades que irão representar os dados
+    - [ ] Event
+    - [ ]  Attendee
+    - [ ]  Check-in
+- [ ] Criar repositories
+    - [ ]  Event
+    - [ ]  Attendee
+    - [ ] Check-in
+- [ ]  Criar controllers
+    - [ ]  **/events**
+    - [ ]  **/attendees**
+     
+## Criando funcionalidade de organizador
+
+- [ ]  Criar `EventService`
+    - [ ] Listagem de eventos
+    - [ ]  Criação de eventos
+- [ ]  Criar Endpoints
+    - [ ] GET /events/{eventId}
+    - [ ] POST /events
+- [ ] Adicionar tratamento para Exceções
+- [ ] Criar `AttendeeService`
+   - [ ]  Listagem de Attendees de um evento
+- [ ]  Criar Endpoint
+    - [ ] GET /events/{eventId}/attendees
+
+## Criando funcionalidade do participante
+
+- [ ] Implementar novas funcionalidades no `AttendeeService`
+    - [ ]  Inscrição de participante num evento
+        - O participante deve enviar `name` e `email`
+    - [ ]  Exibição do crachá
+    - O retorno do crachá deverá ser o `name`, `email`, `checkInURL` e **`eventTitle`**
+- [ ] Criar Endpoints
+    - [ ]  POST /events/{eventId}/attendees
+    - [ ]  GET /attendees/{attendeeId}/badge
+- [ ]  Criar **`CheckInService`**
+    - [ ] Criar método para checkIn
+- [ ]  Criar Endpoint
+    - [ ]  POST /attendees/{attendeeId}/check-in
+- [ ]  Tratamento das exceções
