@@ -1,16 +1,41 @@
-# NTW Unite - Rocketseat
- Este projeto foi desenvolvido durante o evento NLW Unite da Rocketseat, onde o desafio era criar o projeto Pass.in. 
-Utilizei a linguagem Java para desenvolver esta aplicação, segue alguns detalhes sobre o Projeto:
-
-<h1>Especificações</h1>
-
-# pass.in
+# Pass.in - Gestão de Participantes em Eventos Presenciais
 <p>O pass.in é uma aplicação de gestão de participantes em eventos presenciais.
-A ferramenta permite que o organizador cadastre um evento e abra uma página pública de inscrição.
+A ferramenta permite que o organizador cadastre eventos, escrevam participantes e facilite o check-in no dia do evento.
 Os participantes inscritos podem emitir uma credencial para check-in no dia do evento.
 O sistema fará um scan da credencial do participante para permitir a entrada no evento.</p>
 
-# Requisitos
+# Regras de negócio
+ - Os participantes só podem se inscrever uma vez em um evento.
+ - A inscrição só é permitida em eventos com vagas disponíveis.
+ - O check-in só pode ser feito uma única vez por participante.
+
+# Tecnológias Utilizadas
+ - IntelliJ IDEA
+ - Maven
+ - Backend: Java com Spring Boot
+ - Insomnia
+ - Notion
+ - [Swagger](https://nlw-unite-nodejs.onrender.com/docs/json)
+  
+
+# O Projeto foi criado usando Spring Initializr, utilizando as seguintes dependências:
+   - Spring Web
+   - Flyway
+   - Dev Tools
+   - Lombok
+   - JPA
+# Para Executar o Projeto
+ 1. Clone este repositório.
+ 2. Instale as dependências necessárias.
+ 3. Execute o servidor backend.
+ 4. Execute o servidor frontend.
+ 5. Acesse a aplicação no navegador.
+
+_______________________________________________________
+_______________________________________________________
+_______________________________________________________
+
+ # Requisitos realizados no Pass.in
 ## Requisitos funcionais
 - [ ] O organizador deve poder cadastrar um novo evento;
 - [ ] O organizador deve poder visualizar dados de um evento;
@@ -19,16 +44,12 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 - [ ] O participante deve poder visualizar seu crachá de inscrição;
 - [ ] O participante deve poder realizar check-in no evento;
 
-# Regras de negócio
-- [ ] O participante só pode se inscrever em um evento uma única vez;
-- [ ] O participante só pode se inscrever em eventos com vagas disponíveis;
-- [ ] O participante só pode realizar check-in em um evento uma única vez;
 
-# Requisitos não-funcionais
+## Requisitos não-funcionais
 - [ ] O check-in no evento será realizado através de um QRCode;
 - [ ] Especificações da API
 - [ ] Banco de dados
-- [ ] Nessa aplicação vamos utilizar banco de dados relacional (SQL). Para ambiente de desenvolvimento seguiremos com o SQLite pela facilidade do ambiente.
+- [ ] Nessa aplicação foi utilizado banco de dados relacional (SQL). 
 - [ ] Diagrama ERD
 <img src="https://file.notion.so/f/f/08f749ff-d06d-49a8-a488-9846e081b224/8f354dec-0218-43af-a16c-16a86f2d82b0/erd.svg?id=1d4a760d-238b-477a-ac6d-c03e0bd682af&table=block&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&expirationTimestamp=1712340000000&signature=uhCjBVqgYe3pr0gfu4OONy0kRx_cF8-LOX8BmoJw6tM&downloadName=erd.svg" alt="Diagrama ERD" style="width:800px;height:800px;">
 
@@ -63,72 +84,8 @@ CREATE UNIQUE INDEX "events_slug_key" ON "events"("slug");
 CREATE UNIQUE INDEX "attendees_event_id_email_key" ON "attendees"("event_id", "email");
 CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
 ```
-# Criando o Projeto
+# Créditos
+Este projeto foi desenvolvido com base no tutorial oferecido pela Rocketseat durante o evento NJW Unite. Agradecemos à equipe da Rocketseat por fornecer recursos valiosos e conhecimento técnico.
+Instrutora responsável pelo tutorial: Fernanda Kipper
 
--  Projeto foi criado usando Spring Initializr, utilizando as seguintes dependências:
-    - Spring Web
-    - Flyway
-    - Dev Tools
-    - Lombok
-    - JPA
-- Tecnológias Utilizadas
-    - IntelliJ IDEA
-    - Maven
-    - Java 17
-    - Insomnia
-    - Notion
-
-
-       
-- [ ] Configurar banco de dados na aplicação
     
-    ```xml
-    		<dependency>
-    			<groupId>org.hsqldb</groupId>
-    			<artifactId>hsqldb</artifactId>
-    			<version>2.7.1</version>
-    		</dependency>
-    ```
-    
-- [ ] Criar migrations para criação das tabelas
-- [ ] Criar entidades que irão representar os dados
-    - [ ] Event
-    - [ ]  Attendee
-    - [ ]  Check-in
-- [ ] Criar repositories
-    - [ ]  Event
-    - [ ]  Attendee
-    - [ ] Check-in
-- [ ]  Criar controllers
-    - [ ]  **/events**
-    - [ ]  **/attendees**
-     
-## Criando funcionalidade de organizador
-
-- [ ]  Criar `EventService`
-    - [ ] Listagem de eventos
-    - [ ]  Criação de eventos
-- [ ]  Criar Endpoints
-    - [ ] GET /events/{eventId}
-    - [ ] POST /events
-- [ ] Adicionar tratamento para Exceções
-- [ ] Criar `AttendeeService`
-   - [ ]  Listagem de Attendees de um evento
-- [ ]  Criar Endpoint
-    - [ ] GET /events/{eventId}/attendees
-
-## Criando funcionalidade do participante
-
-- [ ] Implementar novas funcionalidades no `AttendeeService`
-    - [ ]  Inscrição de participante num evento
-        - O participante deve enviar `name` e `email`
-    - [ ]  Exibição do crachá
-    - O retorno do crachá deverá ser o `name`, `email`, `checkInURL` e **`eventTitle`**
-- [ ] Criar Endpoints
-    - [ ]  POST /events/{eventId}/attendees
-    - [ ]  GET /attendees/{attendeeId}/badge
-- [ ]  Criar **`CheckInService`**
-    - [ ] Criar método para checkIn
-- [ ]  Criar Endpoint
-    - [ ]  POST /attendees/{attendeeId}/check-in
-- [ ]  Tratamento das exceções
