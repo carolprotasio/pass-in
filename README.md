@@ -86,7 +86,7 @@ CREATE UNIQUE INDEX "attendees_event_id_email_key" ON "attendees"("event_id", "e
 CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
 ```
 # Créditos
-Este projeto foi desenvolvido com base no tutorial oferecido pela Rocketseat durante o evento NJW Unite. Agradecemos à equipe da Rocketseat por fornecer recursos valiosos e conhecimento técnico.
-Instrutora responsável pelo tutorial: Fernanda Kipper
+Este projeto foi desenvolvido com base no tutorial oferecido pela Rocketseat durante o evento NJW Unite. Agradeço à equipe da Rocketseat por fornecer recursos valiosos e conhecimento técnico.
+<p> A incrível instrutora responsável pelo tutorial: Fernanda Kipper</p>
 
     
