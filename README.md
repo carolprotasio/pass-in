@@ -27,7 +27,7 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 # Para Executar o Projeto
  1. Clone este repositório:
    ```markdown
-   https://github.com/carolprotasio/pass-in-backend-java.git 📋
+  https://github.com/carolprotasio/pass-in-backend-java.git
 ```
  2. Instale as dependências necessárias e certifique de ter o Maven instalado no seu sistema ```mvn install```
  4. Execute o servidor backend ```mvn spring-boot:run```
