@@ -15,7 +15,7 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
  - Backend: Java com Spring Boot
  - Insomnia
  - Notion
- - [Swagger]([https://nlw-unite-nodejs.onrender.com/docs/json](https://nlw-unite-nodejs.onrender.com/docs/static/index.html))
+ - [Swagger](https://nlw-unite-nodejs.onrender.com/docs/static/index.html)
   
 
 # O Projeto foi criado usando Spring Initializr, utilizando as seguintes dependências:
@@ -51,7 +51,7 @@ _______________________________________________________
 - [ ] Banco de dados
 - [ ] Nessa aplicação foi utilizado banco de dados relacional (SQL). 
 - [ ] Diagrama ERD
-<img src="https://file.notion.so/f/f/08f749ff-d06d-49a8-a488-9846e081b224/8f354dec-0218-43af-a16c-16a86f2d82b0/erd.svg?id=1d4a760d-238b-477a-ac6d-c03e0bd682af&table=block&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&expirationTimestamp=1712340000000&signature=uhCjBVqgYe3pr0gfu4OONy0kRx_cF8-LOX8BmoJw6tM&downloadName=erd.svg" alt="Diagrama ERD" style="width:800px;height:800px;">
+<img src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F08f749ff-d06d-49a8-a488-9846e081b224%2F8f354dec-0218-43af-a16c-16a86f2d82b0%2Ferd.svg?table=block&id=1d4a760d-238b-477a-ac6d-c03e0bd682af&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&userId=&cache=v2" alt="Diagrama ERD" style="width:800px;height:800px;">
 
 # Estrutura do banco (SQL)
 
