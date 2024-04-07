@@ -15,7 +15,7 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
  - Backend: Java com Spring Boot
  - Insomnia
  - Notion
- - [Swagger](https://nlw-unite-nodejs.onrender.com/docs/json)
+ - [Swagger]([https://nlw-unite-nodejs.onrender.com/docs/json](https://nlw-unite-nodejs.onrender.com/docs/static/index.html))
   
 
 # O Projeto foi criado usando Spring Initializr, utilizando as seguintes dependências:
