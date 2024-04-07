@@ -25,14 +25,18 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
    - Lombok
    - JPA
 # Para Executar o Projeto
- 1. Clone este repositório.
- 2. Instale as dependências necessárias.
- 3. Execute o servidor backend.
- 4. Execute o servidor frontend.
- 5. Acesse a aplicação no navegador.
+ 1. Clone este repositório:
+   ```markdown
+   https://github.com/carolprotasio/pass-in-backend-java.git 📋
+```
+ 2. Instale as dependências necessárias e certifique de ter o Maven instalado no seu sistema
+ ```markdown
+    mvn install
+```
+ 4. Execute o servidor backend.
+ 5. Execute o servidor frontend.
+ 6. Acesse a aplicação no navegador.
 
-_______________________________________________________
-_______________________________________________________
 _______________________________________________________
 
  # Requisitos realizados no Pass.in
